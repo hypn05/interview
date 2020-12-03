@@ -25,6 +25,10 @@ Access-Control-Allow-Credentials: true
 
 is not permitted as this would be dangerously insecure, exposing any authenticated content on the target site to everyone.
 
+### Scenario:
+You have credents of a user, why would you still want to perform CSRF attack? 
+CORS can be used to perform attacks in the internal networks.
+
 # HSTS
 Explain the HSTS header 
 o	How and where is the HSTS header set and used? (and a few more in-depth questions)
@@ -74,6 +78,7 @@ OAuth2.0 is a protocol to provide temporary access to a resource
 * Once the Client has successfully logged in, the IdP generates a SAML Assertion (also known as a SAML Token), which includes the user identity (such as the username entered before), and sends it directly to the Service Provider.
 * The IdP redirects the Client back to the Service Provider
 * The Service Provider verifies the SAML Assertion, extracts the user identity from it, assigns correct permissions for the Client and then logs him in to the service
+
 ![SAML](SAML_flow-768x509.jpg)
 ## The OAuth workflow
 Critically, OAuth doesn’t assume that the Client is a web browser.
@@ -173,6 +178,7 @@ Can GET requests have a body?
 * XML
 * Standardization
 * security
+* Soap only uses POST requests
 Good for financial transaction(Asynchronous processing, Stateful operation)
 
 ### Rest
@@ -182,6 +188,7 @@ Good for financial transaction(Asynchronous processing, Stateful operation)
 * High Performance
 * Scalability
 * Flaxibility
+* A Restful service would use the normal HTTP verbs of GET, POST, PUT and DELETE for working with the required components
 Great for running multi ops(Limited connection, coding simplicity, caching)
 
 # HEE
