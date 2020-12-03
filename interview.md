@@ -27,6 +27,7 @@ is not permitted as this would be dangerously insecure, exposing any authenticat
 
 ### Scenario:
 You have credents of a user, why would you still want to perform CSRF attack? 
+
 CORS can be used to perform attacks in the internal networks.
 
 # HSTS
