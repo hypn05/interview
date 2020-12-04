@@ -189,10 +189,12 @@ Yes, GET request can have content in the body. possible reason for doing so "we 
 A payload within a GET request message has no defined semantics; sending a payload body on a GET request might cause some existing implementations to reject the request.
 * A lot of servers cache the responses to GET and HEAD requests. This behavior might cause issues.
 * It’s also possible that the Server might just ignore the body of GET request.
-* SoupUI doesnot support but POstman does
 
 Other reasons alarming us to not use GET with Body are as below,
-
+* SoupUI doesn't support but Postman does supports GET with Body parameter.
+* .NET Core supports GET with Body parameter.
+* .NET framework doesn’t support GET with Body parameter.
+* Fiddler supports GET body but with a warning.
 * Amazon CloudFront doesn’t support GET with Body parameter.
 * Sping-framework doesn’t support GET with the body.
 * XMLHttpRequest doesn’t support GET with the body.
