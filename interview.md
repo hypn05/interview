@@ -92,6 +92,7 @@ The example workflow proceeds now as follows:
 * The Client logs in to the Authorisation Server, and if the code is valid, the Client gets an Access Token that can be used request a protected resource from the Resource Server
 * After receiving a request for a protected resource with an accompanying Access Token, the Resource Server verifies the validity of the token directly with the Authorisation Server
 * If the token was valid, the Authorisation Server sends information about the Client to the Resource Server
+
 ![SAML](OAuth_flow-768x545.jpg)
 
 # Authentication
@@ -170,7 +171,6 @@ Any user-supplied data containing SQL syntax inserted into the static query will
 What are the two different types of web services and how do you test each one?
 o	What is the difference between SOAP and REST?
 Webservice – Dif between SOAP and REST
-Can GET requests have a body?
 ## Answer
 ### Soap
 * Simple Object access protocol
@@ -181,8 +181,22 @@ Can GET requests have a body?
 * Soap only uses POST requests
 Good for financial transaction(Asynchronous processing, Stateful operation)
 
+*[More description needed for SOAP]*
+
+### Rest
+* Representational start transter
+* Architec style
+* XML, JSON,
+* High Performance
+* Scalability
+* Flaxibility
+* A Restful service would use the normal HTTP verbs of GET, POST, PUT and DELETE for working with the required components
+Great for running multi ops(Limited connection, coding simplicity, caching)
+
 ## Question
 How would you distinguish between a GET and POST request given that you don’t know the HTTP method used? Can GET requests also have content in the body? 
+
+Can GET requests have a body?
 ## Answer
 Yes, GET request can have content in the body. possible reason for doing so "we can not send very large inputs due to technical limitations of maximum URL length size which I found to be approximately ~2000 characters in general."
 
@@ -208,16 +222,6 @@ Although specification support for GET method with body parameter, it also warms
 | GET is the primary mechanism of information retrieval and the focus of almost all performance optimizations.
 
 | A payload within a GET request message has no defined semantics; sending a payload body on a GET request might cause some existing implementations to reject the request.
-
-### Rest
-* Representational start transter
-* Architec style
-* XML, JSON,
-* High Performance
-* Scalability
-* Flaxibility
-* A Restful service would use the normal HTTP verbs of GET, POST, PUT and DELETE for working with the required components
-Great for running multi ops(Limited connection, coding simplicity, caching)
 
 # HEE
 Explain dif between hashing, encoding, encryption – security benefits
@@ -261,3 +265,6 @@ Do you follow any blogs? podcasts?
 Describe a cool vulnerability you found 
 How do you keep yourself updated on cybersecurity news? Did you hear of any cool/new findings and try it out on your assessments? What is something that you picked up recently from the resources you look at? 
 How to keep up with security news and continued training.
+## Answer
+App: Cyber security news, Medium
+Youtube: Hak5, HackerSpliot, HACKADAY, John Hammond, PwnFunction, LiveOverflow, STOK, Bugcrowd, F5 Devcentral, Optional, zSecurity
