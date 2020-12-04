@@ -169,7 +169,6 @@ Any user-supplied data containing SQL syntax inserted into the static query will
 # Web services
 What are the two different types of web services and how do you test each one?
 o	What is the difference between SOAP and REST?
-How would you distinguish between a GET and POST request given that you don’t know the HTTP method used? Can GET requests also have content in the body? 
 Webservice – Dif between SOAP and REST
 Can GET requests have a body?
 ## Answer
@@ -181,6 +180,28 @@ Can GET requests have a body?
 * security
 * Soap only uses POST requests
 Good for financial transaction(Asynchronous processing, Stateful operation)
+
+## Question
+How would you distinguish between a GET and POST request given that you don’t know the HTTP method used? Can GET requests also have content in the body? 
+## Answer
+Yes, GET request can have content in the body. possible reason for doing so "we can not send very large inputs due to technical limitations of maximum URL length size which I found to be approximately ~2000 characters in general."
+
+A payload within a GET request message has no defined semantics; sending a payload body on a GET request might cause some existing implementations to reject the request.
+* A lot of servers cache the responses to GET and HEAD requests. This behavior might cause issues.
+* It’s also possible that the Server might just ignore the body of GET request.
+* SoupUI doesnot support but POstman does
+
+Other reasons alarming us to not use GET with Body are as below,
+
+* Amazon CloudFront doesn’t support GET with Body parameter.
+* Sping-framework doesn’t support GET with the body.
+* XMLHttpRequest doesn’t support GET with the body.
+* Most Javascript libraries don’t support GET with a body.
+* Elastic search support GET with body parameter. (This is the only example, I found in the support.)
+
+Although specification support for GET method with body parameter, it also warms us about the usage and clarifies that it is not useful to do so.
+
+[RFC 7231](https://tools.ietf.org/html/rfc7231#section-4.3.1)
 
 ### Rest
 * Representational start transter
