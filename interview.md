@@ -203,6 +203,10 @@ Although specification support for GET method with body parameter, it also warms
 
 [RFC 7231](https://tools.ietf.org/html/rfc7231#section-4.3.1)
 
+| GET is the primary mechanism of information retrieval and the focus of almost all performance optimizations.
+
+| A payload within a GET request message has no defined semantics; sending a payload body on a GET request might cause some existing implementations to reject the request.
+
 ### Rest
 * Representational start transter
 * Architec style
