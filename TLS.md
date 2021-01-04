@@ -52,3 +52,10 @@ The Browser Reconnaissance and Exfiltration via Adaptive Compression of Hypertex
 Heartbleed was a critical vulnerability that was found in the heartbeat extension of the popular OpenSSL library. This extension is used to keep a connection alive as long as both parties are still there. The Heartbleed vulnerability is registered in the NIST NVD database as CVE-2014-0160.
 
 The client sends a heartbeat message to the server with a payload that contains data and the size of the data (and padding). The server must respond with the same heartbeat request, containing the data and the size of data that the client sent.
+
+
+### EBC vs CBC
+https://medium.com/asecuritysite-when-bob-met-alice/electronic-code-book-ecb-and-cipher-block-chaining-cbc-e3309d704917
+
+## Attck on EBC 
+https://nakedsecurity.sophos.com/2013/11/04/anatomy-of-a-password-disaster-adobes-giant-sized-cryptographic-blunder/
