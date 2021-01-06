@@ -1,8 +1,8 @@
 # Table of Content
 
-* [Auth](./Auth.md)
-* [General](./interview.md)
-* [OWASP](./OWASP.md)
-* [Poisoning](./poisoning.md)
-* [TLS](./TLS.md)
+* [Auth](./Content/Auth.md)
+* [General](./Content/interview.md)
+* [OWASP](./Content/OWASP.md)
+* [Poisoning](./Content/poisoning.md)
+* [TLS](./Content/TLS.md)
 
