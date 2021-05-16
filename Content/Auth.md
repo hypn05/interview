@@ -37,6 +37,14 @@ OAuth2.0 is a protocol to provide temporary access to a resource
 * The Service Provider verifies the SAML Assertion, extracts the user identity from it, assigns correct permissions for the Client and then logs him in to the service
 
 ![SAML](SAML_flow-768x509.jpg)
+
+
+#### Cons
+
+All done. Note that the SP never processed or even saw the Client’s credentials. Here we succeeded logging in with two redirects. The rude awakening comes when we want to move from a web application to a native one, such as a mobile app.
+
+The devil lies within the step 6. There are two ways the IdP can redirect the Client back to the SP: HTTP Redirect and HTTP POST. The first one is not recommended, since the length of the HTTP Redirect URL is limited, and there is no standard telling what exactly is the maximum length. The second way avoids data size issues, but is very archaic to use. Either the user has to click a button to submit the POST form, or it has to be automated using JavaScript. This isn’t that big of a problem when dealing with web applications, but on a mobile application the authentication would simply fail, as the applications do not have access to the POST data and for a good reason.
+
 ## The OAuth workflow
 Critically, OAuth doesn’t assume that the Client is a web browser.
 
