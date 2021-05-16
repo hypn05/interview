@@ -3,7 +3,7 @@ Why do we demonstrate exploits for findings like SQL Injection, instead of just 
 Do we exploit SQL injection or just report the finding once we confirm that it is a true positive?
 Scenario: What if Burp reports a SQLi finding and the payload contains the collaborator payload. Burp shows that there is at least a DNS look up picked up by the collaborator server. How would you go about triaging and testing this finding?
 ## Answer
-Any user-supplied data containing SQL syntax inserted into the static query will be interpreted and executed. This leaves the application vulnerable to SQL injection since an attacker can inject SQL query syntax that intentionally alters the target query's structure.
+SQL injection is a web security vulnerability that allows an attacker to interfere with the queries that an application makes to its database. It generally allows an attacker to view data that they are not normally able to retrieve. This might include data belonging to other users, or any other data that the application itself is able to access. In many cases, an attacker can modify or delete this data, causing persistent changes to the application's content or behavior.
 
 # Deserialization
 Deserialization attacks
