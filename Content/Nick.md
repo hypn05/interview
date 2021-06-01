@@ -26,6 +26,13 @@ Vulnerabilities can arise in the client application's implementation of OAuth as
 
 https://portswigger.net/web-security/oauth
 
+## Tokens
+### Access Token
+    * Used to obtain access to a protected resource(Issue by Auth Server). Has a limited lifetime.
+
+### Refresh token
+    * Used to obtain a new access token when access token has expired
+
 
 ## OAuth Grant types:
 ### Client Credential Grant type(Machine to Machine)
@@ -42,7 +49,7 @@ https://portswigger.net/web-security/oauth
 
 ![SAML](AuthCode.jpg)
 ### Resource Owner-Password Crdential-Grant Type
-* Fiest Party application
+* Fir st Party application
     * Client fully trusted with user creds
     * Apps build by same company
     * Client gets user creds from the user through UI, Client get an access token using the creds, Auth server issues an access token(Optionally a refresh token)
