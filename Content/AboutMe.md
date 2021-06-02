@@ -1,20 +1,21 @@
 ## Situation where you had to escalate to your manager
 
 Start
-* Over 3 years
-* multiple situations where escalation was required
-* I would go with the most recent one
+* Might have crashed a bank website
+
 Basic
 * Bank application assessment
 * Prduction application
 * No testing window provided
 * No limitation provided for testing
+
 To manager
 * Should not be intrusive
 * A testing window should be provided
 * Had a call with the application team with PL, CL and Manager on call.
 * Discussed the whole scenario and reached to a conclusion that the test will be performed during off hours 
 * Intrusive testing should not be performed
+
 Result
 * Potentially avoided crashing on a bank application that would have impacted thousands if not millions of users.
 * Helped the application team understand the process of standard Pentest, and should be expected.

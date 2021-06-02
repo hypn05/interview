@@ -56,3 +56,12 @@ On the other hand, Local File Inclusion (LFI) is very much similar to RFI. The o
 WAF,
 Blacklisting,
 Code fixing
+
+---------------------------------------
+
+`Network firewalls` operate at OSI model Layers 3 and 4, which protect data transfer and network traffic. This includes attacks against the Domain Name System (DNS) and File Transfer Protocol (FTP), as well as Simple Mail Transfer Protocol (SMTP), Secure Shell (SSH), and Telnet.
+
+`WAFs` protect attacks at OSI model Layer 7, which is the application level.
+
+Edge Computing and CDN
+

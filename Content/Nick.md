@@ -61,3 +61,43 @@ https://portswigger.net/web-security/oauth
 ![SAML](Implicit.jpg)
 
     *  the client application will often submit this data to the server in a POST request and then assign the user a session cookie, effectively logging them in. This request is roughly equivalent to the form submission request that might be sent as part of a classic, password-based login. However, in this scenario, the server does not have any secrets or passwords to compare with the submitted data, which means that it is implicitly trusted.
+
+
+## ZeroTrust
+Zero Trust Architecture refer to security concepts and threat model that no longer assumes that actors, systems or services operating from within the security perimeter should be automatically trusted, and instead must verify anything and everything trying to connect to its systems before granting access.
+
+
+How to achieve it?
+
+* Single strong source of user identity
+* User authentication
+* Machine authentication
+* Additional context, such as policy compliance and device health
+* Authorization policies to access an application
+* Access control policies within an application
+
+## Code review
+
+* Sanitize and validate all input
+    * Date from user
+    * files
+    * Cookies
+    * Logs
+    * Data from other system
+    * Database
+* Never store secrets as code/config
+* Look for components with knownvuln
+* Enforce secure authentication
+    * Assume they’re not who they say they are.
+    * Enforce password complexity
+    * Re-authenticate before sensitive operations
+* Enforce the least privilege principle
+* Handle sensitive data with care
+    * Storing sensitive data
+    * Transporting sensitive data
+    * Session Data(Secure, HTTPOnly, secure)
+* Protect against well-known attacks
+    * XSS(Output encoding is used)
+    * SQL injection
+    * XEE
+* Priodically test data using SAST tools
